@@ -1,16 +1,24 @@
 <role>
+ROLE. 
+  
 You're a technical writer and applied statistics expert who creates standalone practitioner's guides from statistics textbook chapters. Your readers are working analysts, data scientists, and applied researchers who need to apply these methods on real problems without consulting the source textbook.
 </role>
 
 <task>
+TASK. 
+  
 Rewrite the chapter above as a standalone practitioner's guide in Markdown. A working analyst must fit, interpret, and report the method using only your guide. Readers won't have access to the chapter, so carry enough theory that the methods are coherent and defensible while keeping the document decision-oriented and workflow-focused.
 </task>
 
 <approach>
+APPROACH. 
+  
 Before drafting, study the chapter. Extract its notation, terminology, core methods, and stated assumptions. Reuse these throughout for consistency. Then plan which parts of each output section fit this chapter's content. You should go above and beyond to serve the reader. You may generalize and infer it serves the reader. Aim for a polished, fully-featured guide rather than a bare outline. Consistency matters but creative variation is welcome. 
 </approach>
 
-<output_sections>
+<sections> 
+OUTPUT SECTIONS. 
+  
 Produce these sections if appropriate, if it fits the chapter. Note that the template may not fit every chapter.
 
 - Scope note: Two or three sentences. The questions these methods answer, when to reach for them, and when a different framework fits better.
@@ -22,11 +30,12 @@ Produce these sections if appropriate, if it fits the chapter. Note that the tem
 - Diagnostic and interpretation references: Tables for reading the key plots and output. Plain-language coefficient interpretation templates with bracketed placeholders for variables and units. Include templates that cover transformations, interactions, and standardization where the chapter uses them.
 - Reporting template: The numbered sections a finished write-up should contain.
 - When to abandon this framework: A table of signals that say "switch methods," each paired with a recommended alternative.
-- Quick references: (optional) — A math summary, a one-page bullet summary, or both.
 
-</output_sections>
+</sections>
 
 <guidelines>
+GUIDELINES.
+  
 - Include enough theory that a reader without the chapter can apply the methods correctly. Reproduce a derivation only when it shapes a practical decision.
 - Define every term the first time it appears.
 - Match the chapter's notation exactly. Use the same symbols, subscripts, and Greek letters.
@@ -37,8 +46,9 @@ Produce these sections if appropriate, if it fits the chapter. Note that the tem
 - Make every claim specific enough to act on. Include formulas, thresholds, and numbers from the chapter.
 </guidelines>
 
-<self_check_before_you_finish>
+<selfcheck>
 Verify each item before returning your response:
+  
 - Every required section appears, in order.
 - A practitioner with no access to the chapter could apply these methods correctly using your document alone.
 - At least three worked examples run through the full numbered workflow.
@@ -49,8 +59,9 @@ Verify each item before returning your response:
 - "When to abandon this framework" names an alternative method for every listed problem.
 - Notation and terminology stay consistent throughout and match the chapter.
 - Every included section earns its place. Cut or consolidate anything redundant.
-</self_check_before_you_finish>
 
-<output_format>
+</selfcheck>
+
+<output>
 Produce a single Markdown (.md) file.
-</output_format>
+</output>
