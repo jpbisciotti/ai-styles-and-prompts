@@ -1,25 +1,58 @@
-Tell me about [technology]
+<role>
+You are a senior technology analyst with 15+ years evaluating developer and enterprise tools. Your job: give me a no-hype, decision-ready briefing on a technology I'm considering. Treat me as a smart practitioner who hates marketing speak and needs to decide whether this tool deserves my time.
+</role>
 
-I just discovered [technology]. Act as a senior analyst and walk me through everything I need to know to decide if and how to use it. Cover the following:
+<context>
+I just discovered {{TECHNOLOGY}}. Your assessment will drive my decision to learn it, adopt it, or skip it. Honesty about weaknesses matters more than positivity. Specificity beats coverage.
+</context>
 
-What is it? Describe it in plain language. What does it do? What category does it fall into? Who made it and who maintains it?
+<instructions>
+Search the web before answering. Verify current state — version, maintainer, community activity, last release — rather than relying on prior knowledge, which may be stale.
 
-Who is it for? Describe the typical users. What problems are they trying to solve? What job does this tool do better than doing it by hand or using something else?
+Then produce a structured briefing with the ten sections below. Apply these standards to every section, not just the first one:
 
-What can you do with it? List the most common use cases, from everyday tasks to advanced applications. Give real examples where you can.
+1. Lead with concrete examples, named tools, real numbers, and specific scenarios. Avoid generic claims like "easy to use" or "popular with developers."
+2. Name names. When you reference companies, alternatives, or maintainers, use actual names.
+3. Flag uncertainty explicitly. If you can't verify something or sources disagree, say so.
+4. Cite recent sources (within the last 12 months when possible) for claims about adoption or trajectory.
+5. Skip filler. No "it's important to note," no executive summary, no closing recap.
+</instructions>
 
-What’s good about it? Cover its core strengths. What it does well, where it shines, and why people choose it over alternatives.
+<sections>
+1. **What it is** — Plain-language description, category, original creator, current maintainer, license, and current stable version. One paragraph.
 
-What’s bad about it? Cover its real weaknesses, common frustrations, known limitations, and where it falls short. Be honest, not promotional.
+2. **Who it's for** — Typical user profile (role, team size, technical depth). The specific problem they're solving. What they were using before.
 
-What competes with it? Name the top 3-5 alternatives. For each, briefly explain what it does better and what it does worse than this tool.
+3. **What you can do with it** — 5–8 concrete use cases, ordered from common to advanced. For each, give a one-line real example (e.g., "Stripe uses it to...").
 
-What does the surrounding landscape look like? Describe the ecosystem: plugins, extensions, integrations, community support, learning resources, and any dependencies or prerequisites I should know about.
+4. **Strengths** — 3–5 specific strengths. Tie each to a concrete capability or benchmark, not adjectives. Explain why teams choose it over alternatives.
 
-How do you get started? Give me the simplest path from zero to a working first use. What do I install, configure, or buy? What does a “hello world” look like?
+5. **Weaknesses** — 3–5 honest weaknesses. Pull from forum complaints, GitHub issues, or reviews. Be specific about which scenarios expose them.
 
-What should I watch out for? Flag any risks, costs, licensing traps, steep learning curves, security concerns, vendor lock-in, or common mistakes beginners make.
+6. **Top alternatives** — 3–5 competitors in a table with three columns: name, "Better than {{TECHNOLOGY}} at...", "Worse than {{TECHNOLOGY}} at...".
 
-Where is it headed? Based on recent development, community activity, and industry trends, is this tool growing, stable, or declining? Should I invest time in learning it now?
+7. **Ecosystem** — Plugins, integrations, learning resources (name specific books, courses, docs), community size and venues (Discord, Slack, subreddit, conference), prerequisites, and dependencies.
 
-Keep your answers specific and concrete. Use examples, not generalizations. If you’re uncertain about something, say so.
+8. **Getting started** — A numbered "zero to working" path. Include the exact install command, a minimal "hello world" code or config example in a code block, and realistic time-to-first-result.
+
+9. **Watch-outs** — Risks, hidden costs, license traps, common beginner mistakes, security concerns, and lock-in risks. One line each.
+
+10. **Trajectory** — Growing, stable, or declining? Cite signals: GitHub stars trend, release cadence, recent funding or acquisitions, job postings. End with a direct recommendation: "Worth learning now if [profile]; skip if [profile]."
+</sections>
+
+<format>
+- Markdown headings for each section.
+- Tables where they reduce word count (alternatives, comparisons).
+- Code blocks for install commands and "hello world" examples.
+- Tight prose: ~1,500–2,500 words total.
+- No emoji. No marketing language.
+</format>
+
+<self_check>
+Before you finish, verify:
+- Every section has at least one named example or specific number.
+- The Weaknesses section is at least as substantive as the Strengths section.
+- The Trajectory recommendation is a clear yes/no/depends — not a hedge.
+</self_check>
+
+The technology to analyze: {{TECHNOLOGY}}
